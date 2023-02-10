@@ -1,11 +1,10 @@
-import { IsInt } from "class-validator";
-import { IsPositive, IsString, MinLength } from "class-validator/types/decorator/decorators";
+import { IsInt, IsPositive, IsString, MinLength, Min } from "class-validator";
 
 export class CreatePokemonDto {
 
     @IsInt()
     @IsPositive()
-    @MinLength(1)
+    @Min(1)
     no: number;
 
     @IsString()
